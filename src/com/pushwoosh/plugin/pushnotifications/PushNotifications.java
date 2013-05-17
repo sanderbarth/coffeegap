@@ -10,20 +10,9 @@
 
 package com.pushwoosh.plugin.pushnotifications;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.location.Location;
-import android.os.Bundle;
-import android.util.Log;
-import com.arellomobile.android.push.PushManager;
-import com.arellomobile.android.push.BasePushMessageReceiver;
-import com.arellomobile.android.push.exception.PushWooshException;
-import com.arellomobile.android.push.preference.SoundType;
-import com.arellomobile.android.push.preference.VibrateType;
-import com.arellomobile.android.push.utils.RegisterBroadcastReceiver;
-import com.google.android.gcm.GCMRegistrar;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 import org.apache.cordova.api.CallbackContext;
 import org.apache.cordova.api.CordovaPlugin;
@@ -31,9 +20,21 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.location.Location;
+import android.os.Bundle;
+import android.util.Log;
+
+import com.arellomobile.android.push.BasePushMessageReceiver;
+import com.arellomobile.android.push.PushManager;
+import com.arellomobile.android.push.exception.PushWooshException;
+import com.arellomobile.android.push.preference.SoundType;
+import com.arellomobile.android.push.preference.VibrateType;
+import com.arellomobile.android.push.utils.RegisterBroadcastReceiver;
+import com.google.android.gcm.GCMRegistrar;
 
 public class PushNotifications extends CordovaPlugin
 {

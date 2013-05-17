@@ -1,16 +1,17 @@
 package phonegap.coffee;
 
 import org.apache.cordova.DroidGap;
-import android.content.Intent;
-import com.arellomobile.android.push.PushManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+
+import com.arellomobile.android.push.PushManager;
 
 public class CoffeeActivity extends DroidGap {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-
+		super.onCreate(savedInstanceState);
 		PushManager mPushManager = new PushManager(this, "phonegap.coffee", "myId");
 		mPushManager.onStartup(this);
 
